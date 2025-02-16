@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.expencetracker.ui.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home_to_addEditTransaction"
+            app:destination="@id/addEditTransactionFragment">
+            <argument
+                android:name="category_id"
+                app:argType="integer" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.expencetracker.ui.categories.CategoriesFragment"
+        android:label="Categories">
+        <action
+            android:id="@+id/action_categories_to_addEditCategory"
+            app:destination="@id/addEditCategoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditTransactionFragment"
+        android:name="com.example.expencetracker.ui.transaction.AddEditTransactionFragment"
+        android:label="Add Transaction">
+        <argument
+            android:name="category_id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditCategoryFragment"
+        android:name="com.example.expencetracker.ui.categories.AddEditCategoryFragment"
+        android:label="Add Category" />
+
+</navigation>

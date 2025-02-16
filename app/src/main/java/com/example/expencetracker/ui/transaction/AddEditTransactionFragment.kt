@@ -1,4 +1,4 @@
-package com.example.expencetracker.ui
+package com.example.expencetracker.ui.transaction
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.expencetracker.R
 import com.example.expencetracker.data.entities.Expense
 import com.example.expencetracker.databinding.FragmentAddEditTransactionBinding
 
