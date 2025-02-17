@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -52,7 +52,7 @@ dependencies {
 
     val room_version = "2.6.1"
     implementation (libs.androidx.room.runtime)
-    kapt (libs.androidx.room.compiler)
+    ksp("androidx.room:room-compiler:$room_version")
     implementation (libs.androidx.room.ktx)
 
     // ViewModel and LiveData

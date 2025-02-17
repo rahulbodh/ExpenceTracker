@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.expencetracker.data.entities.Category
+import com.example.expencetracker.databinding.ItemCategoryBinding
 
 class CategoryAdapter(
     private val onCategoryClick: (Category) -> Unit
